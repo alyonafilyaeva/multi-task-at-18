@@ -22,4 +22,22 @@
 
 ![](https://github.com/alyonafilyaeva/multi-task-at-18/blob/main/screens/100_run.jpg)
 
-Время: прмиерно 183 секунды
+Время: прмерно 183 секунды
+
+Можно сделать вывод, что с увеличением количества потоков, уменьшается время проверки ссылок.
+
+# CPU-bound
+
+#### Замер скорости герации на на 1 ядре
+
+![](https://github.com/alyonafilyaeva/multi-task-at-18/blob/main/screens/1_process.jpg)
+
+Время: примерно 105 секунд
+
+#### Замер скорости герации на 2 ядрах
+
+![](https://github.com/alyonafilyaeva/multi-task-at-18/blob/main/screens/2_process.jpg)
+
+Время: 83 секунды
+
+![](https://github.com/alyonafilyaeva/multi-task-at-18/blob/main/screens/2_process_dis.jpg)
