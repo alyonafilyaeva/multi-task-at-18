@@ -11,6 +11,16 @@ def get_coins(n):
         if h.endswith("00000"):
             return s + ',' + h
 
+def main():
+    with concurrent.futures.ProcessPoolExecutor(max_workers=100) as executor:
+        for coin in zip(executor.map(get_coins, range(3))):
+            print(coin)
+
+if __name__ == '__main__':
+    start = time.time()
+    main()
+    finish = time.time()
+    print(finish - start)
 
 #def is_prime(n):
 #    if n < 2:
@@ -25,17 +35,4 @@ def get_coins(n):
 #        if n % i == 0:
 #            return False
 #    return True
-
-def main():
-    with concurrent.futures.ProcessPoolExecutor(max_workers=100) as executor:
-        for coin in zip(executor.map(get_coins, range(3))):
-            print(coin)
-
-if __name__ == '__main__':
-    start = time.time()
-    main()
-    finish = time.time()
-    print(finish - start)
-
-
 
